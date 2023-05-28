@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  /* background: skyblue; */
+  /*Añadir foto de fondo sustituyendo eI eolor*/
+  background-image: url(img/fondo-azul-tecnologia.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+ background-size: 100% 100%;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: rgb(137, 66, 188);
+  border-radius: 5px;
+  padding: 0 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+
+header .logo:hover {
+  color: rgb(137, 66, 188);
+  background: #fff;
+  transition: 0.5s;
+}
+
+header .navbar {
+  position: relative;
+  display: flex;
+}
+
+header .navbar li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+header .navbar li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  transition: 0.3s;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+header .navbar li a:hover {
+  border-bottom: 5px solid rgb(137, 66, 188);
+  padding: 2px;
+}
+
+.contenido {
+  position: relative;
+  width: 100%;
+  display: flex;
+  Justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.contenido .tituloBox {
+  position: relative;
+  max-width: 600px;
+  text-align: center;
+}
+
+.contenido .tituloBox h2 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.contenido .tituloBox h2 span {
+  background: rgb(137, 66, 188);
+  color: white;
+  padding: 0 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.contenido .tituloBox p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  margin: 20px;
+}
+
+.contenido .tituloBox a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(137, 66, 188);
+  background: #fff;
+  padding: 10px 20px;
+  margin: left 30px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.contenido .tituloBox a:hover {
+  color: #fff;
+  background: rgb(137, 66, 188);
+  transition: 0.5s;
+}
+
+.contenido .imgBox {
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0px;
+  margin-top: -50px;
+  z-index: -5;
+}
+
+.contenido .imgBox img {
+  height: 80vh;
+}
+
+.contenido .imgBox img:hover {
+  height: 80vh,
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0px;
+  left: 600px;
+  margin-bottom: 20px;
+  padding: 0 100px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright p {
+  color: #fff;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.redesSociales {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center•;
+  padding: 0 100px 30px;
+  list-style: none;
+}
+
+.redesSociales li {
+  padding: 10px;
+}
+
+.redesSociales li a {
+  color: white;
+  font-size: 2.5em;
+  transition: 0.3s;
+}
+
+.redesSociales li:hover a {
+  color: rgb(45, 3, 74);
+}
+
+.circulo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(2, 112, 108, 0.386);
+  clip-path: circle(650px at right 800px);
+  Width: 100%;
+  height: 100%;
+  z-index: -1000;
+}
+
+.proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+}
+
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibiLity: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0px 5px 10px #000;
+}
+
+.card .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .front h3 {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: (0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(3, 35, 54);
+  padding: 15px;
+  color: #f3F3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 5px 10px #000;
+  text-align: center;
+
+}
+
+.card .back .link {
+  border-top: 1px solid #f3f3f3;
+  height: 50px;
+  line-height: 50px;
+}
+
+.card .back .link a {
+  color: #f3f3f3;
+}
+
+.card .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.card .back p {
+  letter-spacing: 1px;
+}
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg)
+}
+
+.negro {
+  color: black;  
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: rgb(137, 66, 188);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20vh;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgb(137, 66, 188);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 35vh;
+}
+
+h1 {
+  color: #333;
+}
